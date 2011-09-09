@@ -1,0 +1,14 @@
+telnet
+
+set localecho
+
+set clrf
+
+o www.wcgplc.co.uk 80
+
+[ENTER] until cursor moves to the next line or top of the page
+
+GET / HTTP/1.1
+Host: www.wcgplc.co.uk
+
+[ENTER] two times
