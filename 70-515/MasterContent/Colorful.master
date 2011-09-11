@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Professional.master.cs" Inherits="Professional" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="~/Styles/Colorful-Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">        
+        <img runat="server" src="~/Contoso.gif" alt="Contoso" />
+        <asp:Label Text="Welcome to Contoso!" runat="server" ID="GreetingLabel" />
+    </div>
+    <div>
+        <asp:Menu ID="Menu1" runat="server" CssClass="menu" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="Products" Value="Products"></asp:MenuItem>
+                <asp:MenuItem Text="Services" Value="Services"></asp:MenuItem>
+                <asp:MenuItem Text="Downloads" Value="Downloads"></asp:MenuItem>
+                <asp:MenuItem Text="About Us" Value="About Us"></asp:MenuItem>
+            </Items>            
+        </asp:Menu>
+    </div>
+    <div>        
+        <asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
