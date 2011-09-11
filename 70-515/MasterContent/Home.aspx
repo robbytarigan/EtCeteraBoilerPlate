@@ -5,7 +5,7 @@
 <asp:Content ID="MainContent" ContentPlaceHolderID="MainContent" Runat="Server">
     <asp:TextBox ID="UserNameTextBox" runat="server"></asp:TextBox>
     <br />
-    <asp:DropDownList ID="SitePrefDropDownList" runat="server" AutoPostBack="True">
+    <asp:DropDownList ID="SitePrefDropDownList" runat="server" AutoPostBack="True" onselectedindexchanged="SitePrefDropDownList_SelectedIndexChanged">
         <asp:ListItem>Professional</asp:ListItem>
         <asp:ListItem>Colorful</asp:ListItem>
     </asp:DropDownList>
