@@ -1,0 +1,3 @@
+﻿<asp:Image ImageUrl="~/App_Themes/Fabrikam/Fabrikam.gif" SkinID="Logo" runat="server" />
+<asp:TextBox runat="server" BorderColor="Orange" BorderWidth="1pt" Font-Names="Arial" Font-Size="10pt" ForeColor="Brown" ></asp:TextBox>
+<asp:Button runat="server" BorderColor="DarkOrange" BorderWidth="1pt" Font-Bold="true" BackColor="DarkOrange" ForeColor="White" />

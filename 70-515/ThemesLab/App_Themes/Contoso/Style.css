@@ -1,0 +1,16 @@
+﻿body
+{
+    font-family : Tahoma;
+    font-size : 10pt;
+}
+
+.textBox    
+{
+    font-style: italic;
+}
+
+.button 
+{
+    font-style: oblique;
+    font-size: 30pt;
+}
