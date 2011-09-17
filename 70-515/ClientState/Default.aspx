@@ -18,6 +18,6 @@
         <asp:Label runat="server" ID="Label1" />
         <asp:HyperLink runat="server" ID="Hyperlink1" NavigateUrl="Default2.aspx" Text="Access Other Page" />
         <asp:Button runat="server" ID="Button1" Text="Submit" />
-        <%--<asp:HiddenField ID="HiddenField1" runat="server" />--%>
+        <asp:HiddenField ID="HiddenField1" runat="server" />
     </div>
 </asp:Content>

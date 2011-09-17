@@ -9,11 +9,10 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (ViewState["clicks"] != null) {
-            ViewState["clicks"] = (int)ViewState["clicks"] + 1;
-        } else {
-            ViewState["clicks"] = 1;
-        }
-        Label1.Text = " ViewState clicks: " + ((int)ViewState["clicks"]).ToString();
+        int clicks = 0;
+        int.TryParse(HiddenField1.Value, out clicks);
+        clicks++;
+        HiddenField1.Value = clicks.ToString();
+        Label1.Text = "HiddenField clicks: " + HiddenField1.Value;
     }
 }
