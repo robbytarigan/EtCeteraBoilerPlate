@@ -14,5 +14,8 @@ public partial class _Default : System.Web.UI.Page
         Application.UnLock();
         Label1.Text = string.Format("Application clicks: {0}",
         Application["clicks"].ToString());
+
+        Session["session_clicks"] = (int)Session["session_clicks"] + 1;
+        Label2.Text = string.Format("Session clicks: {0}", Session["session_clicks"].ToString());
     }
 }

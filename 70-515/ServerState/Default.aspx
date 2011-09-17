@@ -16,6 +16,9 @@
     </p>
     <div>
         <asp:Label runat="server" ID="Label1" />
+        <br />
+        <asp:Label runat="server" ID="Label2" />
+        <br />
         <asp:HyperLink NavigateUrl="Default2.aspx" runat="server" ID="HyperLink1" Text="Go to other page" />
     </div>
 </asp:Content>
