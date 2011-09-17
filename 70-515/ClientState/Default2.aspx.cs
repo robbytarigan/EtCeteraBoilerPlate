@@ -9,11 +9,15 @@ public partial class Default2 : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (ViewState["clicks"] != null) {
-            ViewState["clicks"] = (int)ViewState["clicks"] + 1;
+        // Read the cookie clicks and increment
+        int cookieClicks;
+        if (Request.Cookies["clicks"] != null) {
+            cookieClicks = int.Parse(Request.Cookies["clicks"].Value) + 1;
         } else {
-            ViewState["clicks"] = 1;
+            cookieClicks = 1;
         }
-        Label1.Text = " ViewState clicks: " + ((int)ViewState["clicks"]).ToString();
+        // Save the cookie to be returned on the next visit
+        Response.Cookies["clicks"].Value = cookieClicks.ToString();
+        Label1.Text = "Cookie clicks: " + cookieClicks.ToString();
     }
 }

@@ -9,10 +9,15 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        int clicks = 0;
-        int.TryParse(HiddenField1.Value, out clicks);
-        clicks++;
-        HiddenField1.Value = clicks.ToString();
-        Label1.Text = "HiddenField clicks: " + HiddenField1.Value;
+        // Read the cookie clicks and increment
+        int cookieClicks;
+        if (Request.Cookies["clicks"] != null) {
+            cookieClicks = int.Parse(Request.Cookies["clicks"].Value) + 1;
+        } else {
+            cookieClicks = 1;
+        }
+        // Save the cookie to be returned on the next visit
+        Response.Cookies["clicks"].Value = cookieClicks.ToString();
+        Label1.Text = "Cookie clicks: " + cookieClicks.ToString();
     }
 }
