@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="ObjectDataSource1" />
+        <asp:AdRotator ID="AdRotator1" runat="server" />
     
     </div>
     <asp:BulletedList ID="BulletedList1" runat="server">
@@ -27,6 +27,37 @@
     <asp:HyperLink ID="HyperLink1" runat="server">HyperLink</asp:HyperLink>
     <asp:Image ID="Image1" runat="server" />
     <asp:ImageButton ID="ImageButton1" runat="server" />
+    <asp:ImageMap ID="ImageMap1" runat="server">
+    </asp:ImageMap>
+    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
+    <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+    
+    <asp:Localize ID="Localize2" runat="server"></asp:Localize>
+    <asp:MultiView ID="MultiView1" runat="server">
+        <asp:View ID="View1" runat="server">
+        </asp:View>
+    </asp:MultiView>
+    <asp:Panel ID="Panel1" runat="server">
+    </asp:Panel>
+    <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
+    <asp:RadioButton ID="RadioButton1" runat="server" />
+    <asp:RadioButtonList ID="RadioButtonList1" runat="server">
+    </asp:RadioButtonList>
+    <asp:Substitution ID="Substitution1" runat="server" />
+    <asp:Table ID="Table1" runat="server">
+    </asp:Table>
+    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+    <asp:Wizard ID="Wizard1" runat="server">
+        <WizardSteps>
+            <asp:WizardStep runat="server" title="Step 1">
+            </asp:WizardStep>
+            <asp:WizardStep runat="server" title="Step 2">
+            </asp:WizardStep>
+        </WizardSteps>
+    </asp:Wizard>
+    <asp:Xml ID="Xml1" runat="server"></asp:Xml>
     </form>
 </body>
 </html>
