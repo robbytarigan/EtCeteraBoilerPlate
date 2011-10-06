@@ -1,12 +1,14 @@
 ﻿// IndexButton.cs
-using System;
-using System.ComponentModel;
-using System.Security.Permissions;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-
 namespace Samples.AspNet.CS.Controls {
+    #region Usings
+    using System;
+    using System.ComponentModel;
+    using System.Security.Permissions;
+    using System.Web;
+    using System.Web.UI;
+    using System.Web.UI.WebControls;
+
+    #endregion Usings
     [
     AspNetHostingPermission(SecurityAction.Demand,
         Level = AspNetHostingPermissionLevel.Minimal),
