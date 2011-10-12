@@ -11,13 +11,13 @@
     <div>
     
         <asp:Label ID="NameLabel" runat="server" Text="Name:"></asp:Label>
-        <asp:TextBox ID="NameTextBox" runat="server"></asp:TextBox>
-        <asp:Button ID="AddButton" runat="server" Text="Add" />
+        <asp:TextBox ID="NameTextBox" runat="server" MaxLength="12"></asp:TextBox>
+        <asp:Button ID="AddButton" runat="server" Text="Add" onclick="AddButton_Click" />
         <br />
         <br />
         <asp:Literal ID="ShippingTypeLiteral" runat="server" Text="Shipping Type"></asp:Literal>
         <br />
-        <asp:RadioButtonList ID="ShipingTypeRadioButtonList" runat="server">
+        <asp:RadioButtonList ID="ShippingTypeRadioButtonList" runat="server">
             <asp:ListItem>Standard</asp:ListItem>
             <asp:ListItem>Priority</asp:ListItem>
             <asp:ListItem>Urgent</asp:ListItem>
@@ -29,7 +29,7 @@
         <asp:CheckBoxList ID="DestinationsCheckBoxList" runat="server">
         </asp:CheckBoxList>
         <br />
-        <asp:Button ID="ShipButton" runat="server" Text="Ship" />
+        <asp:Button ID="ShipButton" runat="server" Text="Ship" onclick="ShipButton_Click" />
         <br />
         <br />
         <asp:Label ID="ShippingConfirmationLabel" runat="server"></asp:Label>
