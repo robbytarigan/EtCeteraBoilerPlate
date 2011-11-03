@@ -34,4 +34,20 @@ public partial class _Default : System.Web.UI.Page
         return rhs;
     }
 
+    protected void OfficeImageMap_Click(object sender, ImageMapEventArgs e) {
+        OfficeSelectedLabel.Text = e.PostBackValue;
+    }
+
+    protected void Wizard1_FinishButtonClick(object sender, WizardNavigationEventArgs e) {
+        Wizard1.Visible = false;
+        Response.Write("Thank you! Your request is being processed.");
+    }
+
+    protected void Wizard1_ActiveStepChanged(object sender, EventArgs e) {
+        if (Wizard1.ActiveStep.Title == "Summary") {
+            SummaryLabel.Text = string.Format("Summary Info:<br />Room: {0}<br />Delivery Date: {1}",
+                OfficeSelectedLabel.Text,
+                ServiceDateCalendar.SelectedDate.ToShortDateString());
+        }
+    }
 }

@@ -10,7 +10,7 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="2" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="350px" Width="475px">
+        <asp:Wizard ID="Wizard1" runat="server" ActiveStepIndex="2" BackColor="#F7F6F3" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" Height="350px" Width="475px" onactivestepchanged="Wizard1_ActiveStepChanged" onfinishbuttonclick="Wizard1_FinishButtonClick">
             <HeaderStyle BackColor="#5D7B9D" BorderStyle="Solid" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Left" />
             <NavigationButtonStyle BackColor="#FFFBFF" BorderColor="#CCCCCC" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284775" />
             <SideBarButtonStyle BorderWidth="0px" Font-Names="Verdana" ForeColor="White" />
@@ -18,7 +18,7 @@
             <StepStyle BorderWidth="0px" ForeColor="#5D7B9D" />
             <WizardSteps>
                 <asp:WizardStep runat="server" title="Select Office">
-                    <asp:ImageMap ID="OfficeImageMap" runat="server" ImageUrl="~/Images/Floorplan.png">
+                    <asp:ImageMap ID="OfficeImageMap" runat="server" ImageUrl="~/Images/Floorplan.png" OnClick="OfficeImageMap_Click">
                     </asp:ImageMap>
                     <br />
                     <br />
