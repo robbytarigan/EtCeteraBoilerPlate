@@ -14,9 +14,13 @@
             <WizardSteps>
                 <asp:WizardStep runat="server" title="Select Item(s)" StepType="Start">
                     Choose Items:<br />
-                    <asp:CheckBoxList ID="itemCheckBoxList" runat="server">                    
+                    <asp:CheckBoxList ID="itemCheckBoxList" runat="server" DataTextField="Name" DataValueField="Id">                    
                     </asp:CheckBoxList>
-                
+                    
+                </asp:WizardStep>
+                <asp:WizardStep runat="server" title="Specify Quantity" StepType="Step">
+                    Specify Quantity: <br />
+                    <asp:PlaceHolder ID="quantityItemPlaceHolder" runat="server"></asp:PlaceHolder>
                 </asp:WizardStep>
                 <asp:WizardStep runat="server" title="Fill Dispatch Address" StepType="Step">
                     

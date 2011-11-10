@@ -22,9 +22,24 @@ public partial class _Default : System.Web.UI.Page {
         new CartItem { Id=5, Name="Modern Jeans", Price= 19.79}
     };
 
+    private void RenderSpecifyQuantityStep() {
+
+    }
+
     protected override void OnInit(EventArgs e) {
         base.OnInit(e);
 
-        
+        itemCheckBoxList.DataSource = AvailableItems;
+        itemCheckBoxList.DataBind();
+    }
+
+    protected override void OnLoadComplete(EventArgs e) {
+        base.OnLoadComplete(e);
+
+        switch (checkoutWizard.ActiveStepIndex) {
+            case 1:
+                RenderSpecifyQuantityStep();
+                break;
+        }
     }
 }
