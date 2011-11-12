@@ -7,7 +7,7 @@
         Welcome to ASP.NET!
     </h2>
     <div>
-        <asp:Wizard ID="checkoutWizard" runat="server" ActiveStepIndex="0">
+        <asp:Wizard ID="checkoutWizard" runat="server" ActiveStepIndex="0" onnextbuttonclick="checkoutWizard_NextButtonClick">
             <HeaderTemplate>
                 Check out!
             </HeaderTemplate>
@@ -23,11 +23,24 @@
                     <asp:PlaceHolder ID="quantityItemPlaceHolder" runat="server"></asp:PlaceHolder>
                 </asp:WizardStep>
                 <asp:WizardStep runat="server" title="Fill Dispatch Address" StepType="Step">
-                    
+                    <asp:Label Text="Despatch Address:" runat="server" />
+                    <asp:TextBox runat="server" ID="despatchAddressTextBox" TextMode="MultiLine" Rows="5" />  
                 </asp:WizardStep>
                 <asp:WizardStep runat="server" StepType="Finish" Title="Confirm">
+                    Detail of your items:
+                    <br />
+                    <asp:Table ID="confirmationItemTable" runat="server">
+                        <asp:TableHeaderRow>
+                            <asp:TableHeaderCell>Name</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Quantity</asp:TableHeaderCell>
+                            <asp:TableHeaderCell>Unit Price</asp:TableHeaderCell>
+                        </asp:TableHeaderRow>
+                    </asp:Table>
+                    <br />
+                    <asp:Label ID="confirmationDespatchAddressLabel" runat="server" />
                 </asp:WizardStep>
                 <asp:WizardStep runat="server" StepType="Complete" Title="Complete">
+                    Your item has been processed and will be delivered soon!
                 </asp:WizardStep>
             </WizardSteps>
         </asp:Wizard>

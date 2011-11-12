@@ -16,7 +16,7 @@ public partial class QuantityItemControl : System.Web.UI.UserControl {
     public int Quantity {
         get {
             if (quantity < 1) {
-                Int32.TryParse(quantityTextBox.Text, out quantity);
+                Int32.TryParse(Request.Form[quantityTextBox.UniqueID], out quantity);
             }
 
             return quantity;
@@ -24,8 +24,10 @@ public partial class QuantityItemControl : System.Web.UI.UserControl {
 
         set {
             quantity = value;
-            quantityTextBox.Text = quantity.ToString();
+            quantityTextBox.Text = quantity.ToString();            
         }
     }
+    
+    
 
 }
