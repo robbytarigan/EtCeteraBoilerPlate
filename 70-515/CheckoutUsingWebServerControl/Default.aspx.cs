@@ -23,8 +23,14 @@ public partial class _Default : System.Web.UI.Page {
     public class CheckoutDetail {
         private List<BoughtItem> items = new List<BoughtItem>();
 
-        public List<BoughtItem> Items { get { return items; } }
-        public string DespatchAddress { get; set; }
+        public List<BoughtItem> Items { get { return items; } }        
+        
+        public string BillingAddress { get; set; }
+        public string BillingAddressPostCode { get; set; }
+
+        public byte ShippingAddressSource { get; set; }
+        public string ShippingAddress { get; set; }
+        public string ShippingAddressPostCode { get; set; }
     }
 
     private List<CartItem> AvailableItems = new List<CartItem>() { 
@@ -61,7 +67,20 @@ public partial class _Default : System.Web.UI.Page {
     }
 
     private void RenderFillDespatchAddress() {
-        despatchAddressTextBox.Text = Detail.DespatchAddress;
+        CheckoutDetail currentDetail = Detail;
+        billingAddress1TextBox.Text = currentDetail.BillingAddress;
+        billingAddressPostCodeTextBox.Text = currentDetail.BillingAddressPostCode;
+
+        switch (currentDetail.ShippingAddressSource) {
+            case 1: shippingAddressSelectionMultiView.ActiveViewIndex = 0;
+                break;
+            case 2: 
+                shippingAddressSelectionMultiView.ActiveViewIndex = 1;
+                shippingAddress1TextBox.Text = currentDetail.ShippingAddress;
+                shippingAddressPostCodeTextBox.Text = currentDetail.ShippingAddressPostCode;
+                break;            
+        }
+        
     }
 
     private void RenderConfirmation() {
@@ -86,7 +105,9 @@ public partial class _Default : System.Web.UI.Page {
 
         confirmationItemTable.Rows.Add(footerRow);
 
-        confirmationDespatchAddressLabel.Text = currentDetail.DespatchAddress;
+        confirmationBillingAddressLabel.Text = String.Format("{0}<br />Post Code {1}", currentDetail.BillingAddress, currentDetail.BillingAddressPostCode);
+        confirmationShippingAddressLabel.Text = String.Format("{0}<br />Post Code {1}", currentDetail.ShippingAddress, currentDetail.ShippingAddressPostCode);
+        
     }
 
     private void SetItemList() {
@@ -116,8 +137,12 @@ public partial class _Default : System.Web.UI.Page {
 
     private void SetDespatchAddress() {
         CheckoutDetail currentDetail = Detail;
-        currentDetail.DespatchAddress = despatchAddressTextBox.Text;
+        currentDetail.BillingAddress = billingAddress1TextBox.Text;
+        currentDetail.BillingAddressPostCode = billingAddressPostCodeTextBox.Text;
 
+        currentDetail.ShippingAddress = currentDetail.ShippingAddressSource != 2 ? billingAddress1TextBox.Text : shippingAddress1TextBox.Text;
+        currentDetail.ShippingAddressPostCode = currentDetail.ShippingAddressSource != 2? billingAddressPostCodeTextBox.Text : shippingAddressPostCodeTextBox.Text;
+        
         Detail = currentDetail;
     }
 
@@ -156,5 +181,10 @@ public partial class _Default : System.Web.UI.Page {
                 SetDespatchAddress();
                 break;
         }
+    }
+
+    protected void shippingAddressDropDownList_SelectedIndexChanged(object sender, EventArgs e) {
+        Detail.ShippingAddressSource = Byte.Parse(shippingAddressDropDownList.SelectedValue);
+        SetDespatchAddress();
     }
 }
