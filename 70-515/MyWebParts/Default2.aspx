@@ -35,6 +35,18 @@
                     </asp:LayoutEditorPart>
                 </ZoneTemplate>
             </asp:EditorZone>
+
+            <asp:CatalogZone ID="CatalogZone1" runat="server">
+                <ZoneTemplate>
+                    <asp:DeclarativeCatalogPart ID="DeclarativeCatalogPart1" runat="server">
+                        <WebPartsTemplate>
+                            <uc1:LogoWebPart ID="LogoWebPart1" runat="server" title="Logo" />
+                            <uc2:CalendarWebPart ID="CalendarWebPart1" runat="server" title="Calendar" />
+                        </WebPartsTemplate>
+                    </asp:DeclarativeCatalogPart>                    
+                </ZoneTemplate>
+            </asp:CatalogZone>
+
         </div>                    
         <asp:WebPartZone ID="WebPartZoneBottom" runat="server" HeaderText="Bottom Zone" Style="width: 700px; height: auto;">
         </asp:WebPartZone>
