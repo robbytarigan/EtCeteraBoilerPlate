@@ -22,15 +22,20 @@
             <ZoneTemplate>
                 <uc2:CalendarWebPart ID="CalendarWebPart1" runat="server" title="Calendar" />
             </ZoneTemplate>
-        </asp:WebPartZone>
-        <asp:WebPartZone ID="WebPartZoneCenter" runat="server" HeaderText="Center Zone" Style="width: 400px; float: right; height: 300px">
-            <ZoneTemplate>
-                <asp:Label ID="Label1" runat="server" Text="" title="Edit Page">
-                    <asp:DropDownList ID="DropDownListModes" runat="server" AutoPostBack="true">
-                    </asp:DropDownList>
-                </asp:Label>
-            </ZoneTemplate>            
-        </asp:WebPartZone>
+        </asp:WebPartZone>        
+        <div style="width: 395px; float: right; height: auto; padding-left: 5px">
+            <asp:DropDownList ID="DropDownListModes" runat="server" AutoPostBack="true">
+            </asp:DropDownList>
+                    
+            <asp:EditorZone ID="EditorZone1" runat="server">
+                <ZoneTemplate>
+                    <asp:AppearanceEditorPart ID="AppearanceEditorPart1" runat="server">
+                    </asp:AppearanceEditorPart>
+                    <asp:LayoutEditorPart ID="LayoutEditorPart1" runat="server">
+                    </asp:LayoutEditorPart>
+                </ZoneTemplate>
+            </asp:EditorZone>
+        </div>                    
         <asp:WebPartZone ID="WebPartZoneBottom" runat="server" HeaderText="Bottom Zone" Style="width: 700px; height: auto;">
         </asp:WebPartZone>
     </div>
