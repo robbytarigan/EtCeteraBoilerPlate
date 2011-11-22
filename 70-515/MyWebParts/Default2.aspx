@@ -3,6 +3,10 @@
 <%@ Register src="LogoWebPart.ascx" tagname="LogoWebPart" tagprefix="uc1" %>
 <%@ Register src="CalendarWebPart.ascx" tagname="CalendarWebPart" tagprefix="uc2" %>
 
+<%@ Register src="GetName.ascx" tagname="GetName" tagprefix="uc3" %>
+<%@ Register src="GreetUser.ascx" tagname="GreetUser" tagprefix="uc4" %>
+<%@ Register src="ShowNameBackwards.ascx" tagname="ShowNameBackwards" tagprefix="uc5" %>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head id="Head1" runat="server">
@@ -10,7 +14,23 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:WebPartManager ID="WebPartManager1" runat="server">
+    <asp:WebPartManager ID="WebPartManager1" runat="server">        
+        <StaticConnections>
+            <asp:webPartConnection
+                ID="WebPartConnection1"
+                ProviderID="GetName1"
+                ProviderConnectionPointID="GetUserName"
+                ConsumerID="GreetUser1"
+                ConsumerConnectionPointID="GetName"
+            />
+            <asp:webPartConnection
+                ID="WebPartConnection2"
+                ProviderID="GetName1"
+                ProviderConnectionPointID="GetUserName"
+                ConsumerID="ShowNameBackwards1"
+                ConsumerConnectionPointID="GetName"
+            />
+        </StaticConnections>
     </asp:WebPartManager>
     <div style="width: 700px">
         <asp:WebPartZone ID="WebPartZoneTop" runat="server" HeaderText="Top Zone" Style="width: 700px; height: auto">
@@ -49,6 +69,11 @@
 
         </div>                    
         <asp:WebPartZone ID="WebPartZoneBottom" runat="server" HeaderText="Bottom Zone" Style="width: 700px; height: auto;">
+            <ZoneTemplate>
+                <uc3:GetName ID="GetName1" runat="server" title="Enter Name" />
+                <uc4:GreetUser ID="GreetUser1" runat="server" title="Greeting" />
+                <uc5:ShowNameBackwards ID="ShowNameBackwards1" runat="server" title="Backwards Name" />                
+            </ZoneTemplate>
         </asp:WebPartZone>
     </div>
     </form>
