@@ -24,6 +24,12 @@
             </ZoneTemplate>
         </asp:WebPartZone>
         <asp:WebPartZone ID="WebPartZoneCenter" runat="server" HeaderText="Center Zone" Style="width: 400px; float: right; height: 300px">
+            <ZoneTemplate>
+                <asp:Label ID="Label1" runat="server" Text="" title="Edit Page">
+                    <asp:DropDownList ID="DropDownListModes" runat="server" AutoPostBack="true">
+                    </asp:DropDownList>
+                </asp:Label>
+            </ZoneTemplate>            
         </asp:WebPartZone>
         <asp:WebPartZone ID="WebPartZoneBottom" runat="server" HeaderText="Bottom Zone" Style="width: 700px; height: auto;">
         </asp:WebPartZone>
