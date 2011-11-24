@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!-- Bind the Menu control to a SiteMapDataSource control.  -->
+        <asp:Menu ID="NavigationMenu" DisappearAfter="2000" StaticDisplayLevels="2" StaticSubMenuIndent="10" Orientation="Vertical" Font-Names="Arial" Target="_blank" DataSourceID="MenuSource" runat="server">
+            <StaticMenuItemStyle BackColor="LightSteelBlue" ForeColor="Black" />
+            <StaticHoverStyle BackColor="LightSkyBlue" />
+            <DynamicMenuItemStyle BackColor="Black" ForeColor="Silver" />
+            <DynamicHoverStyle BackColor="LightSkyBlue" ForeColor="Black" />
+        </asp:Menu>
+        <asp:SiteMapDataSource ID="MenuSource" runat="server" />
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
