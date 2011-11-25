@@ -14,7 +14,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:WebPartManager ID="WebPartManager1" runat="server">        
+    <asp:WebPartManager ID="WebPartManager1" runat="server">                
         <StaticConnections>
             <asp:webPartConnection
                 ID="WebPartConnection1"

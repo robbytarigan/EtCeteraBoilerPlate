@@ -18,7 +18,13 @@ public partial class GetName : System.Web.UI.UserControl
     protected void SubmitButton_Click(object sender, EventArgs e) {
         _name = NameTextBox.Text;
     }
-
+    
     [ConnectionProvider("User name provider", "GetUserName")]
     public string GetUserName() { return _name;  }
+
+    [Personalizable]
+    public string UserName {
+        get { return _name; }
+        set { _name = value; }
+    }
 }
