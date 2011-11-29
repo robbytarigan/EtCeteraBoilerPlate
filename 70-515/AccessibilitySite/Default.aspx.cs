@@ -9,6 +9,7 @@ public partial class _Default : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        Form.DefaultFocus = TextBox1.ClientID;
+        Form.DefaultButton = Button1.UniqueID;
     }
 }
