@@ -8,12 +8,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
-        <asp:Label ID="LabelWelcome" runat="server" Text="Label" meta:resourcekey="LabelWelcomeResource1"></asp:Label>
+    <asp:Panel runat="server" ID="mainPanel" GroupingText="Choose Language">  
+    
+        <asp:Label ID="LabelWelcome" runat="server" Text="Label" meta:resourcekey="LabelWelcomeResource1"></asp:Label> 
         <asp:DropDownList ID="DropDownListLang" runat="server" AutoPostBack="True" AppendDataBoundItems="true" meta:resourcekey="DropDownListLangResource1">
             <asp:ListItem Value="">Default</asp:ListItem>
         </asp:DropDownList>
-    </div>
+    </asp:Panel>
     </form>
 </body>
 </html>
