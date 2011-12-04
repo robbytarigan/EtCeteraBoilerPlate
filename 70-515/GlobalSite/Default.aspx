@@ -10,7 +10,8 @@
     <form id="form1" runat="server">
     <div>
         <asp:Label ID="LabelWelcome" runat="server" Text="Label" meta:resourcekey="LabelWelcomeResource1"></asp:Label>
-        <asp:DropDownList ID="DropDownListLang" runat="server" AutoPostBack="True" meta:resourcekey="DropDownListLangResource1">
+        <asp:DropDownList ID="DropDownListLang" runat="server" AutoPostBack="True" AppendDataBoundItems="true" meta:resourcekey="DropDownListLangResource1">
+            <asp:ListItem Value="">Default</asp:ListItem>
         </asp:DropDownList>
     </div>
     </form>
