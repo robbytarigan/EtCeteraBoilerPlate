@@ -43,6 +43,7 @@
     <Reference Include="System.Web" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountNumberQuester.cs" />
     <Compile Include="IDDetail.cs" />
     <Compile Include="IDDetailDesigner.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
