@@ -46,6 +46,7 @@
     <Compile Include="AccountNumberQuester.cs" />
     <Compile Include="IDDetail.cs" />
     <Compile Include="IDDetailDesigner.cs" />
+    <Compile Include="LabeledTextBox.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
