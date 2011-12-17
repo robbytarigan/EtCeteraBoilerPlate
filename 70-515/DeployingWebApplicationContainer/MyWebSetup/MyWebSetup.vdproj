@@ -13,6 +13,24 @@
 "SccProvider" = "8:"
     "Hierarchy"
     {
+        "Entry"
+        {
+        "MsmKey" = "8:_5329285C598E44498A69CCD9FD37A0DB"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_C3F1B01536D340739F0D8CE6E54E6909"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_E6C4DDA672494F8AA221B504DCA01988"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -75,6 +93,19 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
             }
         }
     }
@@ -97,6 +128,66 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5329285C598E44498A69CCD9FD37A0DB"
+            {
+            "SourcePath" = "8:E:\\PicturesToBeBurned\\Eowyn\\19th Month\\100_2900.JPG"
+            "TargetName" = "8:100_2900.JPG"
+            "Tag" = "8:"
+            "Folder" = "8:_5B3886F007454948A784949AF5783666"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3F1B01536D340739F0D8CE6E54E6909"
+            {
+            "SourcePath" = "8:E:\\PicturesToBeBurned\\Eowyn\\19th Month\\DSC00001.JPG"
+            "TargetName" = "8:DSC00001.JPG"
+            "Tag" = "8:"
+            "Folder" = "8:_5B3886F007454948A784949AF5783666"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_E6C4DDA672494F8AA221B504DCA01988"
+            {
+            "SourcePath" = "8:E:\\PicturesToBeBurned\\Eowyn\\19th Month\\100_2901.JPG"
+            "TargetName" = "8:100_2901.JPG"
+            "Tag" = "8:"
+            "Folder" = "8:_5B3886F007454948A784949AF5783666"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -145,11 +236,36 @@
                         {
                         }
                     }
+                    "{4C6F2762-250E-4E7D-82DC-65B304135C98}:_5B3886F007454948A784949AF5783666"
+                    {
+                    "AllowScriptSourceAccess" = "11:FALSE"
+                    "AllowReadAccess" = "11:TRUE"
+                    "AllowWriteAccess" = "11:FALSE"
+                    "AllowDirectoryBrowse" = "11:FALSE"
+                    "LogVisits" = "11:TRUE"
+                    "Index" = "11:TRUE"
+                    "ExecutePermissions" = "3:2"
+                    "Name" = "8:Images"
+                    "AlwaysCreate" = "11:TRUE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_163929E426DB4EC3B6D21AED4D54012E"
+                        "Folders"
+                        {
+                        }
+                    }
                 }
             }
         }
         "LaunchCondition"
         {
+            "{836E08B8-0285-4809-BA42-01DB6754A45D}:_A27C442A87D442219397925D8E6608E2"
+            {
+            "Name" = "8:Browscap Condition"
+            "Condition" = "8:FILEEXISTS1"
+            "Message" = "8:You must have a Browscap.ini file to complete installation. Would you like more information?"
+            "InstallUrl" = "8:http://blogs.iis.net/dmnelson/archive/2009/05/14/updating-browscap-ini-for-internet-explorer-8.aspx"
+            }
             "{836E08B8-0285-4809-BA42-01DB6754A45D}:_DF1CA2119CD64D4B94CE993CF1624ACE"
             {
             "Name" = "8:IIS Condition"
@@ -176,6 +292,21 @@
             "Value" = "8:MinorVersion"
             "Property" = "8:IISMINORVERSION"
             }
+            "{39E1837C-0DB9-45A2-89C8-438377A77565}:_CA20C3D392A24C66A7E14D9C9A6B4770"
+            {
+            "Name" = "8:Search for Browscap"
+            "Folder" = "8:[WindowsFolder]"
+            "Depth" = "2:4"
+            "FileName" = "8:Browscap.ini"
+            "MinVesion" = "8:"
+            "MaxVersion" = "8:"
+            "MinSize" = "8:"
+            "MaxSize" = "8:"
+            "MinDate" = "8:"
+            "MaxDate" = "8:"
+            "Languages" = "8:"
+            "Property" = "8:FILEEXISTS1"
+            }
         }
         "MsiBootstrapper"
         {
@@ -187,7 +318,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MyWebSetup"
         "ProductCode" = "8:{B5BE4039-EBD9-4520-887A-A4E5673A0FCE}"
-        "PackageCode" = "8:{1D551336-9AD1-47FF-BB17-52979B747F67}"
+        "PackageCode" = "8:{DCB31801-BF04-4C0E-BBE5-60656CEF00D9}"
         "UpgradeCode" = "8:{3469CE02-AF6A-4FC0-907A-C1ACB0DD127C}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
