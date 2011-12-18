@@ -1,0 +1,8 @@
+Depending on your environment, you might run into additional issues. If, for example,
+you are running Windows Vista and IIS 7.0, you need an IIS 6-compatible metabase for
+the IIS condition to validate. You can tweak the condition or add the IIS 6 metabase to
+IIS 7.0 from Control Panel (classic view) | Programs And Features | Turn Windows Feature
+On Or Off | Internet Information Services | Web Management Tools | IIS 6 Management
+Compatibility. Another issue is security in Windows Vista and Windows 7. You might have
+to run the Setup.exe file (and not the MSI file) by right-clicking Setup.exe and selecting
+Run As Administrator.
