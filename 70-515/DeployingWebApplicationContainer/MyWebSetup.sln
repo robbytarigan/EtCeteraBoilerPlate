@@ -3,8 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MyWebSetup", "MyWebSetup\MyWebSetup.vdproj", "{D28D9C6C-6E2B-4331-80B3-6DF4E16E44A7}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DeployingWebApplication", "DeployingWebApplication\", "{260162C5-2BEC-4CEF-B9CC-5FB402A49792}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WmiConsole", "WmiConsole\WmiConsole.csproj", "{AB50C065-53B2-4889-830C-16409B826C7E}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "localhost", "http://localhost:50335", "{9415160B-A4C1-48FF-AD34-D65D7B96B617}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
 		Debug.AspNetCompiler.VirtualPath = "/DeployingWebApplication"
 		Debug.AspNetCompiler.PhysicalPath = "DeployingWebApplication\"
@@ -20,10 +23,8 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DeployingWebApplication", "
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "50335"
+		SlnRelativePath = "DeployingWebApplication\"
 	EndProjectSection
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WmiConsole", "WmiConsole\WmiConsole.csproj", "{AB50C065-53B2-4889-830C-16409B826C7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,16 +48,6 @@ Global
 		{D28D9C6C-6E2B-4331-80B3-6DF4E16E44A7}.Release|Mixed Platforms.Build.0 = Release
 		{D28D9C6C-6E2B-4331-80B3-6DF4E16E44A7}.Release|x86.ActiveCfg = Release
 		{D28D9C6C-6E2B-4331-80B3-6DF4E16E44A7}.Release|x86.Build.0 = Release
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Release|Any CPU.Build.0 = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
-		{260162C5-2BEC-4CEF-B9CC-5FB402A49792}.Release|x86.ActiveCfg = Debug|Any CPU
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Debug|Mixed Platforms.Build.0 = Debug|x86
@@ -67,6 +58,16 @@ Global
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Release|Mixed Platforms.Build.0 = Release|x86
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Release|x86.ActiveCfg = Release|x86
 		{AB50C065-53B2-4889-830C-16409B826C7E}.Release|x86.Build.0 = Release|x86
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Release|Mixed Platforms.Build.0 = Debug|Any CPU
+		{9415160B-A4C1-48FF-AD34-D65D7B96B617}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
