@@ -9,22 +9,24 @@
     
     <h2>Suppliers</h2>
     <hr />
-
-    <div style="margin: 20px 0px 20px 40px">
-        Company<br />
-        <asp:TextBox ID="TextBoxCompany" runat="server" Width="200"></asp:TextBox>
-        <br />
-        Contact Name<br />
-        <asp:TextBox ID="TextBoxContact" runat="server" Width="200"></asp:TextBox>
-        <br />
-        City<br />
-        <asp:TextBox ID="TextBoxCity" runat="server" Width="200"></asp:TextBox>
-        <br />
-        Phone<br />
-        <asp:TextBox ID="TextBoxPhone" runat="server" Width="200"></asp:TextBox>
-        <br />
-        <asp:Button ID="ButtonSave" runat="server" Text="add" Style="margin-top: 15px" OnClick="ButtonSave_Click" />
-    </div>
+    
+    <asp:UpdatePanel ID="UpdatePanel2" runat="server" style="margin: 20px 0px 20px 40px">
+        <ContentTemplate>
+            Company<br />
+            <asp:TextBox ID="TextBoxCompany" runat="server" Width="200"></asp:TextBox>
+            <br />
+            Contact Name<br />
+            <asp:TextBox ID="TextBoxContact" runat="server" Width="200"></asp:TextBox>
+            <br />
+            City<br />
+            <asp:TextBox ID="TextBoxCity" runat="server" Width="200"></asp:TextBox>
+            <br />
+            Phone<br />
+            <asp:TextBox ID="TextBoxPhone" runat="server" Width="200"></asp:TextBox>
+            <br />
+            <asp:Button ID="ButtonSave" runat="server" Text="add" Style="margin-top: 15px" OnClick="ButtonSave_Click" />    
+        </ContentTemplate>
+    </asp:UpdatePanel>
     
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <Triggers>
@@ -48,6 +50,14 @@
                     <asp:ControlParameter ControlID="TextBoxPhone" Name="phone" PropertyName="Text" />
                 </InsertParameters>
             </asp:SqlDataSource>
+            
+            <asp:UpdateProgress ID="UpdateProgress1" runat="server">                
+                <ProgressTemplate>
+                    <div style="margin-top: 20px; font-size: larger; color: Green">
+                        Processing, please wait ...
+                    </div>
+                </ProgressTemplate>
+            </asp:UpdateProgress>
         </ContentTemplate>        
     </asp:UpdatePanel>
 

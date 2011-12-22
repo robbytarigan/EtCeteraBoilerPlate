@@ -14,5 +14,11 @@ public partial class _Default : System.Web.UI.Page
     protected void ButtonSave_Click(object sender, EventArgs e) {
         SqlDataSourceNwd.Insert();
         GridView1.DataBind();
+
+        TextBoxCompany.Text = "";
+        TextBoxContact.Text = "";
+        TextBoxCity.Text = "";
+        TextBoxPhone.Text = "";
+        System.Threading.Thread.Sleep(2000);
     }
 }
