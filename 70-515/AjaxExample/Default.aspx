@@ -10,23 +10,38 @@
     <h2>Suppliers</h2>
     <hr />
     
-    <asp:UpdatePanel ID="UpdatePanel2" runat="server" style="margin: 20px 0px 20px 40px">
-        <ContentTemplate>
-            Company<br />
-            <asp:TextBox ID="TextBoxCompany" runat="server" Width="200"></asp:TextBox>
-            <br />
-            Contact Name<br />
-            <asp:TextBox ID="TextBoxContact" runat="server" Width="200"></asp:TextBox>
-            <br />
-            City<br />
-            <asp:TextBox ID="TextBoxCity" runat="server" Width="200"></asp:TextBox>
-            <br />
-            Phone<br />
-            <asp:TextBox ID="TextBoxPhone" runat="server" Width="200"></asp:TextBox>
-            <br />
-            <asp:Button ID="ButtonSave" runat="server" Text="add" Style="margin-top: 15px" OnClick="ButtonSave_Click" />    
-        </ContentTemplate>
-    </asp:UpdatePanel>
+    <div>
+        <asp:UpdatePanel ID="UpdatePanel2" runat="server" style="margin: 20px 0px 20px 40px; width:50%; float:left;">
+            <ContentTemplate>
+                Company<br />
+                <asp:TextBox ID="TextBoxCompany" runat="server" Width="200"></asp:TextBox>
+                <br />
+                Contact Name<br />
+                <asp:TextBox ID="TextBoxContact" runat="server" Width="200"></asp:TextBox>
+                <br />
+                City<br />
+                <asp:TextBox ID="TextBoxCity" runat="server" Width="200"></asp:TextBox>
+                <br />
+                Phone<br />
+                <asp:TextBox ID="TextBoxPhone" runat="server" Width="200"></asp:TextBox>
+                <br />
+                <asp:Button ID="ButtonSave" runat="server" Text="add" Style="margin-top: 15px" OnClick="ButtonSave_Click" />    
+            </ContentTemplate>
+        </asp:UpdatePanel>
+            
+        <asp:UpdatePanel ID="UpdatePanel3" runat="server" style="width:40%; float:left;">
+            <ContentTemplate>
+                <asp:Label Text="Advertisement" runat="server" />
+                <br />
+                <asp:Image ID="advertisementImage" runat="server" ImageUrl="~/Images/contoso.png" Width="130" Height="78" />
+                <asp:Timer ID="Timer1" runat="server" Interval="4000" ontick="Timer1_Tick">
+                </asp:Timer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        
+    </div>
+
+    <br class="clear" />
     
     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
         <Triggers>
