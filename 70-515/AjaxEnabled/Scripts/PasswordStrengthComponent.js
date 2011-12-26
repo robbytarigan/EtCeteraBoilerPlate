@@ -17,7 +17,7 @@ AjaxEnabled.PasswordStrengthComponent.prototype = {
     returnPasswordStrength: function (password) {
         var strPass = new String(password.toString());
 
-        if (strPass.lengh < 5) {
+        if (strPass.length < 5) {
             return "Weak";
         } else if (strPass.length < 8) {
             return "Medium";
@@ -36,4 +36,4 @@ AjaxEnabled.PasswordStrengthComponent.prototype = {
 AjaxEnabled.PasswordStrengthComponent.registerClass('AjaxEnabled.PasswordStrengthComponent', Sys.Component);
 
 // notify script loaded
-if (typeof(Sys) !=== 'undefined') Sys.Application.notifyScriptLoaded();
+if (typeof(Sys) !== 'undefined') Sys.Application.notifyScriptLoaded();
