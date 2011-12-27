@@ -10,9 +10,9 @@ namespace AjaxEnabled {
     public class PassTextBox : TextBox, IScriptControl {
         private ScriptManager sMgr;
 
-        public string WeakCssClass;
-        public string MediumCssClass;
-        public string StrongCssClass;
+        public string WeakCssClass { get; set; }
+        public string MediumCssClass { get; set; }
+        public string StrongCssClass { get; set; }
 
         IEnumerable<ScriptDescriptor> IScriptControl.GetScriptDescriptors() {
             ScriptControlDescriptor descriptor = new ScriptControlDescriptor("AjaxEnabled.PassTextBox", this.ClientID);
