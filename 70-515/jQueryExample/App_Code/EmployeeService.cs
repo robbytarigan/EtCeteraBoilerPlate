@@ -12,6 +12,7 @@ using System.Web.Services;
 // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
 [System.Web.Script.Services.ScriptService]
 public class EmployeeService : System.Web.Services.WebService {
+    [WebMethod]
     public Employee GetEmployeeById(string employeeId) {
         // simulate employee lookup
         return new Employee(employeeId);
