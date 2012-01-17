@@ -12,7 +12,7 @@ AjaxButton.AlertButton.prototype = {
     initialize: function () {
         AjaxButton.AlertButton.callBaseMethod(this, 'initialize');
 
-        this._onClickHandler = Function.createDelegate(this, this._onClick);
+        //this._onClickHandler = Function.createDelegate(this, this._onClick);  // It seems this line is unused
         $addHandlers(this.get_element(), { 'click': this._onClick }, this);
     },
 
