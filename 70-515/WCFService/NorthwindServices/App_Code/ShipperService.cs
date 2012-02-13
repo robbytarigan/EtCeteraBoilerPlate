@@ -10,7 +10,7 @@ using System.Text;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ShipperService" in code, svc and config file together.
 public class ShipperService : IShipperService {
-    private string _cnnString =ConfigurationManager.ConnectionStrings["NwConnectionString"].ToString();
+    private string _cnnString = ConfigurationManager.ConnectionStrings["NwConnectionString"].ToString();
 
     public Shipper GetShipper(int shipperId) {
         StringBuilder sql = new StringBuilder();
