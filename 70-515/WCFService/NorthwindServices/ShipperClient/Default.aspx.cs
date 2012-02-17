@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Services;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using NwServices;
+//using NwServices;
 
 public partial class _Default : System.Web.UI.Page
 {
@@ -15,29 +15,29 @@ public partial class _Default : System.Web.UI.Page
     }
 
     protected void ButtonGet_Click(object sender, EventArgs e) {
-        //todo: add validation & error handling
-        int shipperId = int.Parse(TextBoxShipperCode.Text);
+        ////todo: add validation & error handling
+        //int shipperId = int.Parse(TextBoxShipperCode.Text);
         
-        ShipperServiceClient nwShipper = new ShipperServiceClient();
+        //ShipperServiceClient nwShipper = new ShipperServiceClient();
 
-        Shipper shipper = new Shipper();
+        //Shipper shipper = new Shipper();
 
-        shipper = nwShipper.GetShipper(shipperId);
-        TextBoxShipperId.Text = shipper.ShipperId.ToString();
-        TextBoxCompany.Text = shipper.CompanyName;
-        TextBoxPhone.Text = shipper.Phone;
+        //shipper = nwShipper.GetShipper(shipperId);
+        //TextBoxShipperId.Text = shipper.ShipperId.ToString();
+        //TextBoxCompany.Text = shipper.CompanyName;
+        //TextBoxPhone.Text = shipper.Phone;
     }
     
     protected void ButtonSave_Click(object sender, EventArgs e) {
-        //todo: add validation & error handling
-        Shipper shipper = new Shipper();
+        ////todo: add validation & error handling
+        //Shipper shipper = new Shipper();
 
-        shipper.ShipperId = int.Parse(TextBoxShipperId.Text);
-        shipper.CompanyName = TextBoxCompany.Text;
-        shipper.Phone = TextBoxPhone.Text;
+        //shipper.ShipperId = int.Parse(TextBoxShipperId.Text);
+        //shipper.CompanyName = TextBoxCompany.Text;
+        //shipper.Phone = TextBoxPhone.Text;
 
-        ShipperServiceClient nwShipper = new ShipperServiceClient();
+        //ShipperServiceClient nwShipper = new ShipperServiceClient();
 
-        nwShipper.SaveShipper(shipper);
+        //nwShipper.SaveShipper(shipper);
     }
 }

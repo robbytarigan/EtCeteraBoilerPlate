@@ -7,10 +7,28 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.ServiceModel.Activation;
+using System.ServiceModel.Web;
 
 // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "ShipperService" in code, svc and config file together.
+[ServiceContract(Namespace = "")]
+[AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Allowed)]
 public class ShipperService : IShipperService {
     private string _cnnString = ConfigurationManager.ConnectionStrings["NwConnectionString"].ToString();
+
+    [OperationContract]
+    public IEnumerable<Shipper> GetShippers() {
+        SqlCommand sqlCmd = new SqlCommand("SELECT shipperId, companyName, phone FROM shippers");
+        using (SqlConnection sqlConn = new SqlConnection(_cnnString)) {
+            sqlCmd.Connection = sqlConn;
+            sqlConn.Open();
+
+            SqlDataReader reader = sqlCmd.ExecuteReader(CommandBehavior.CloseConnection);
+            while (reader.Read()) {
+                yield return new Shipper { ShipperId = (int)reader["shipperId"], CompanyName = (string)reader["companyName"], Phone = (string)reader["phone"] };
+            }
+        }
+    }
 
     public Shipper GetShipper(int shipperId) {
         StringBuilder sql = new StringBuilder();
