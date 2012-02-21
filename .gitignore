@@ -84,3 +84,18 @@
 /70-515/PracticeAjax/Handler.ashx
 /70-515/WCFService/NorthwindServices/App_Data/desktop.ini
 /70-515/WCFService/NorthwindServices/App_Data/northwnd_log.ldf
+/70-515/PubsClient/bin/PubsClient.dll
+/70-515/PubsClient/bin/PubsClient.pdb
+/70-515/PubsClient/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/70-515/PubsClient/obj/Debug/PubsClient.csproj.FileListAbsolute.txt
+/70-515/PubsClient/obj/Debug/PubsClient.dll
+/70-515/PubsClient/obj/Debug/PubsClient.pdb
+/70-515/PubsClient/obj/Debug/TempPE/Service References.PubsService.Reference.cs.dll
+/70-515/PubsClient/obj/Debug/TempPE/Web References.PubsService.Reference.cs.dll
+/70-515/WCFService/NorthwindClient/bin/NorthwindClient.dll
+/70-515/WCFService/NorthwindClient/bin/NorthwindClient.pdb
+/70-515/WCFService/NorthwindClient/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/70-515/WCFService/NorthwindClient/obj/Debug/NorthwindClient.csproj.FileListAbsolute.txt
+/70-515/WCFService/NorthwindClient/obj/Debug/NorthwindClient.dll
+/70-515/WCFService/NorthwindClient/obj/Debug/NorthwindClient.pdb
+/70-515/WCFService/NorthwindClient/obj/Debug/TempPE/Service References.NwServices.Reference.cs.dll

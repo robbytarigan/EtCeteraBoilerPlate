@@ -1,0 +1,51 @@
+<Employees>
+    <Employee>
+        <ID>PMA42628M</ID>
+        <FirstName>Paolo</FirstName>
+        <LastName>Accorti</LastName>
+        <Department>IT Department</Department>
+        <Location>Pittsburgh</Location>
+    </Employee>
+    <Employee>
+        <ID>PSA89086M</ID>
+        <FirstName>Pedro</FirstName>
+        <LastName>Afonso</LastName>
+        <Department>IT Department</Department>
+        <Location>Redmond</Location>
+    </Employee>
+    <Employee>
+        <ID>VPA30890F</ID>
+        <FirstName>Victoria</FirstName>
+        <LastName>Ashworth</LastName>
+        <Department>Human Resources</Department>
+        <Location>Redmond</Location>
+    </Employee>
+    <Employee>
+        <ID>H-B39728F</ID>
+        <FirstName>Helen</FirstName>
+        <LastName>Bennett</LastName>
+        <Department>Marketing</Department>
+        <Location>Ann Arbor</Location>
+    </Employee>
+    <Employee>
+        <ID>L-B31947F</ID>
+        <FirstName>Lesley</FirstName>
+        <LastName>Brown</LastName>
+        <Department>Marketing</Department>
+        <Location>Ann Arbor</Location>
+    </Employee>
+    <Employee>
+        <ID>F-C16315M</ID>
+        <FirstName>Francisco</FirstName>
+        <LastName>Chang</LastName>
+        <Department>Human Resources</Department>
+        <Location>Pittsburgh</Location>
+    </Employee>
+    <Employee>
+        <ID>PTC11962M</ID>
+        <FirstName>Philip</FirstName>
+        <LastName>Cramer</LastName>
+        <Department>Sales</Department>
+        <Location>Chicago</Location>
+    </Employee>
+</Employees>
